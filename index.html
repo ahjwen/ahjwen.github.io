@@ -1,392 +1,1055 @@
 <!DOCTYPE html>
-<html>
-<head>
-  <meta charset="utf-8">
+<html style="display: none;" >
+    <head>
+    <meta charset="utf-8">
+    <!--
+        © Material Theme
+        https://github.com/viosey/hexo-theme-material
+        Version: 1.5.2 -->
+    <script>
+        window.materialVersion = "1.5.2"
+        // Delete localstorage with these tags
+        window.oldVersion = [
+            'codestartv1',
+            '1.3.4',
+            '1.4.0',
+            '1.4.0b1',
+            '1.5.0'
+        ]
+    </script>
+
+    <!-- dns prefetch -->
+    <meta http-equiv="x-dns-prefetch-control" content="on">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Meta & Info -->
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta name="renderer" content="webkit">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+    <!-- Title -->
+    
+    <title>
+        
+        ahjwen
+    </title>
+
+    <!-- Favicons -->
+    <link rel="icon shortcut" type="image/ico" href="/img/favicon.png">
+    <link rel="icon" href="/img/favicon.png">
+
+    <meta name="format-detection" content="telephone=no"/>
+    <meta name="description" itemprop="description" content="ahjwen">
+    <meta name="keywords" content="null">
+    <meta name="theme-color" content="#0097A7">
+
+    <!-- Disable Fucking Bloody Baidu Tranformation -->
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+
+    <!--[if lte IE 9]>
+        <link rel="stylesheet" href="/css/ie-blocker.css">
+
+        
+            <script src="/js/ie-blocker.en.js"></script>
+        
+    <![endif]-->
+
+    <!-- Import lsloader -->
+    <script>(function(){window.lsloader={jsRunSequence:[],jsnamemap:{},cssnamemap:{}};lsloader.removeLS=function(a){try{localStorage.removeItem(a)}catch(b){}};lsloader.setLS=function(a,c){try{localStorage.setItem(a,c)}catch(b){}};lsloader.getLS=function(a){var c="";try{c=localStorage.getItem(a)}catch(b){c=""}return c};versionString="/*"+(window.materialVersion||"unknownVersion")+"*/";lsloader.clean=function(){try{var b=[];for(var a=0;a<localStorage.length;a++){b.push(localStorage.key(a))}b.forEach(function(e){var f=lsloader.getLS(e);if(window.oldVersion){var d=window.oldVersion.reduce(function(g,h){return g||f.indexOf("/*"+h+"*/")!==-1},false);if(d){lsloader.removeLS(e)}}})}catch(c){}};lsloader.clean();lsloader.load=function(f,a,b,d){if(typeof b==="boolean"){d=b;b=undefined}d=d||false;b=b||function(){};var e;e=this.getLS(f);if(e&&e.indexOf(versionString)===-1){this.removeLS(f);this.requestResource(f,a,b,d);return}if(e){var c=e.split(versionString)[0];if(c!=a){console.log("reload:"+a);this.removeLS(f);this.requestResource(f,a,b,d);return}e=e.split(versionString)[1];if(d){this.jsRunSequence.push({name:f,code:e});this.runjs(a,f,e)}else{document.getElementById(f).appendChild(document.createTextNode(e));b()}}else{this.requestResource(f,a,b,d)}};lsloader.requestResource=function(b,e,a,c){var d=this;if(c){this.iojs(e,b,function(h,f,g){d.setLS(f,h+versionString+g);d.runjs(h,f,g)})}else{this.iocss(e,b,function(f){document.getElementById(b).appendChild(document.createTextNode(f));d.setLS(b,e+versionString+f)},a)}};lsloader.iojs=function(d,b,g){var a=this;a.jsRunSequence.push({name:b,code:""});try{var f=new XMLHttpRequest();f.open("get",d,true);f.onreadystatechange=function(){if(f.readyState==4){if((f.status>=200&&f.status<300)||f.status==304){if(f.response!=""){g(d,b,f.response);return}}a.jsfallback(d,b)}};f.send(null)}catch(c){a.jsfallback(d,b)}};lsloader.iocss=function(f,c,h,a){var b=this;try{var g=new XMLHttpRequest();g.open("get",f,true);g.onreadystatechange=function(){if(g.readyState==4){if((g.status>=200&&g.status<300)||g.status==304){if(g.response!=""){h(g.response);a();return}}b.cssfallback(f,c,a)}};g.send(null)}catch(d){b.cssfallback(f,c,a)}};lsloader.iofonts=function(f,c,h,a){var b=this;try{var g=new XMLHttpRequest();g.open("get",f,true);g.onreadystatechange=function(){if(g.readyState==4){if((g.status>=200&&g.status<300)||g.status==304){if(g.response!=""){h(g.response);a();return}}b.cssfallback(f,c,a)}};g.send(null)}catch(d){b.cssfallback(f,c,a)}};lsloader.runjs=function(f,c,e){if(!!c&&!!e){for(var b in this.jsRunSequence){if(this.jsRunSequence[b].name==c){this.jsRunSequence[b].code=e}}}if(!!this.jsRunSequence[0]&&!!this.jsRunSequence[0].code&&this.jsRunSequence[0].status!="failed"){var a=document.createElement("script");a.appendChild(document.createTextNode(this.jsRunSequence[0].code));a.type="text/javascript";document.getElementsByTagName("head")[0].appendChild(a);this.jsRunSequence.shift();if(this.jsRunSequence.length>0){this.runjs()}}else{if(!!this.jsRunSequence[0]&&this.jsRunSequence[0].status=="failed"){var d=this;var a=document.createElement("script");a.src=this.jsRunSequence[0].path;a.type="text/javascript";this.jsRunSequence[0].status="loading";a.onload=function(){d.jsRunSequence.shift();if(d.jsRunSequence.length>0){d.runjs()}};document.body.appendChild(a)}}};lsloader.tagLoad=function(b,a){this.jsRunSequence.push({name:a,code:"",path:b,status:"failed"});this.runjs()};lsloader.jsfallback=function(c,b){if(!!this.jsnamemap[b]){return}else{this.jsnamemap[b]=b}for(var a in this.jsRunSequence){if(this.jsRunSequence[a].name==b){this.jsRunSequence[a].code="";this.jsRunSequence[a].status="failed";this.jsRunSequence[a].path=c}}this.runjs()};lsloader.cssfallback=function(e,c,b){if(!!this.cssnamemap[c]){return}else{this.cssnamemap[c]=1}var d=document.createElement("link");d.type="text/css";d.href=e;d.rel="stylesheet";d.onload=d.onerror=b;var a=document.getElementsByTagName("script")[0];a.parentNode.insertBefore(d,a)};lsloader.runInlineScript=function(c,b){var a=document.getElementById(b).innerText;this.jsRunSequence.push({name:c,code:a});this.runjs()}})();</script>
+
+    <!-- Import queue -->
+    <script>function Queue(){this.dataStore=[];this.offer=b;this.poll=d;this.execNext=a;this.debug=false;this.startDebug=c;function b(e){if(this.debug){console.log("Offered a Queued Function.")}if(typeof e==="function"){this.dataStore.push(e)}else{console.log("You must offer a function.")}}function d(){if(this.debug){console.log("Polled a Queued Function.")}return this.dataStore.shift()}function a(){var e=this.poll();if(e!==undefined){if(this.debug){console.log("Run a Queued Function.")}e()}}function c(){this.debug=true}}var queue=new Queue();</script>
+
+    <!-- Import CSS -->
+    
+        <style id="material_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("material_css","/css/material.min.css?Z7a72R1E4SxzBKR/WGctOA==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+        <style id="style_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("style_css","/css/style.min.css?MKetZV3cUTfDxvMffaOezg==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+
+        
+
+    
+
+    
+
+    <!-- Config CSS -->
+
+<!-- Other Styles -->
+<style>
+  body, html {
+    font-family: Roboto, "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
+    overflow-x: hidden !important;
+  }
   
-  <title>ahjwen</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="ahjwen">
-<meta property="og:type" content="website">
-<meta property="og:title" content="ahjwen">
-<meta property="og:url" content="ahjwen.github.io/index.html">
-<meta property="og:site_name" content="ahjwen">
-<meta property="og:description" content="ahjwen">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="ahjwen">
-<meta name="twitter:description" content="ahjwen">
-  
-    <link rel="alternate" href="/atom.xml" title="ahjwen" type="application/atom+xml">
-  
-  
-    <link rel="icon" href="/favicon.png">
-  
-  
-    <!--<link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">-->
-  
-  <link rel="stylesheet" href="/css/style.css">
-  
+  code {
+    font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+  }
+
+  a {
+    color: #00838F;
+  }
+
+  .mdl-card__media,
+  #search-label,
+  #search-form-label:after,
+  #scheme-Paradox .hot_tags-count,
+  #scheme-Paradox .sidebar_archives-count,
+  #scheme-Paradox .sidebar-colored .sidebar-header,
+  #scheme-Paradox .sidebar-colored .sidebar-badge{
+    background-color: #0097A7 !important;
+  }
+
+  /* Sidebar User Drop Down Menu Text Color */
+  #scheme-Paradox .sidebar-colored .sidebar-nav>.dropdown>.dropdown-menu>li>a:hover,
+  #scheme-Paradox .sidebar-colored .sidebar-nav>.dropdown>.dropdown-menu>li>a:focus {
+    color: #0097A7 !important;
+  }
+
+  #post_entry-right-info,
+  .sidebar-colored .sidebar-nav li:hover > a,
+  .sidebar-colored .sidebar-nav li:hover > a i,
+  .sidebar-colored .sidebar-nav li > a:hover,
+  .sidebar-colored .sidebar-nav li > a:hover i,
+  .sidebar-colored .sidebar-nav li > a:focus i,
+  .sidebar-colored .sidebar-nav > .open > a,
+  .sidebar-colored .sidebar-nav > .open > a:hover,
+  .sidebar-colored .sidebar-nav > .open > a:focus,
+  #ds-reset #ds-ctx .ds-ctx-entry .ds-ctx-head a {
+    color: #0097A7 !important;
+  }
+
+  .toTop {
+    background: #757575 !important;
+  }
+
+  .material-layout .material-post>.material-nav,
+  .material-layout .material-index>.material-nav,
+  .material-nav a {
+    color: #757575;
+  }
+
+  #scheme-Paradox .MD-burger-layer {
+    background-color: #757575;
+  }
+
+  #scheme-Paradox #post-toc-trigger-btn {
+    color: #757575;
+  }
+
+  .post-toc a:hover {
+    color: #00838F;
+    text-decoration: underline;
+  }
+
+</style>
+
+
+<!-- Theme Background Related-->
+
+    <style>
+      body{
+        background-color: #F5F5F5;
+      }
+
+      /* blog_info bottom background */
+      #scheme-Paradox .material-layout .something-else .mdl-card__supporting-text{
+        background-color: #fff;
+      }
+    </style>
+
+
+
+
+<!-- Fade Effect -->
+
+    <style>
+      .fade {
+        transition: all 800ms linear;
+        -webkit-transform: translate3d(0,0,0);
+        -moz-transform: translate3d(0,0,0);
+        -ms-transform: translate3d(0,0,0);
+        -o-transform: translate3d(0,0,0);
+        transform: translate3d(0,0,0);
+        opacity: 1;
+      }
+
+      .fade.out{
+        opacity: 0;
+      }
+    </style>
+
+
+<!-- Import Font -->
+<!-- Import Roboto -->
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">
+
+
+<!-- Import Material Icons -->
+
+
+    <style id="material_icons"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("material_icons","/css/material-icons.css?pqhB/Rd/ab0H2+kZp0RDmw==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+
+
+
+
+    <!-- Import jQuery -->
+    
+        <script>lsloader.load("jq_js","/js/jquery.min.js?qcusAULNeBksqffqUM2+Ig==", true)</script>
+    
+
+    <!-- WebAPP Icons -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="application-name" content="ahjwen">
+    <meta name="msapplication-starturl" content="ahjwen.github.io/">
+    <meta name="msapplication-navbutton-color" content="#0097A7">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-title" content="ahjwen">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon" href="/img/favicon.png">
+
+    <!-- Site Verification -->
+    
+    
+
+    <!-- RSS -->
+    
+
+    <!-- The Open Graph protocol -->
+    <meta property="og:url" content="ahjwen.github.io/">
+    <meta property="og:type" content="blog">
+    <meta property="og:title" content="ahjwen">
+    <meta property="og:image" content="/img/favicon.png">
+    <meta property="og:description" content="ahjwen">
+    
+
+    
+
+    <!-- The Twitter Card protocol -->
+    <meta name="twitter:card" content="summary_large_image">
+
+    <!-- Add canonical link for SEO -->
+    
+        <link rel="canonical" href="ahjwen.github.io" />
+    
+
+    <!-- Structured-data for SEO -->
+    
+        
+<script type="application/ld+json">
+{
+    "@context": "http://schema.org",
+    "@type": "Website",
+    "publisher": {
+        "@type": "Organization",
+        "name": "ahjwen",
+        "logo": "/img/favicon.png"
+    },
+    "url": "ahjwen.github.io",
+    "image": {
+        "@type": "ImageObject",
+        "url": "/img/favicon.png"
+    },
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "ahjwen.github.io"
+    },
+    "description": "ahjwen"
+}
+</script>
+
+
+
+
+    
+
+    <!-- Analytics -->
+    
+    
+    
+
+    <!-- Custom Head -->
+    
 
 </head>
 
-<body>
-  <div id="container">
-    <div id="wrap">
-      <header id="header">
-  <div id="banner"></div>
-  <div id="header-outer" class="outer">
-    <div id="header-title" class="inner">
-      <h1 id="logo-wrap">
-        <a href="/" id="logo">ahjwen</a>
-      </h1>
-      
-        <h2 id="subtitle-wrap">
-          <a href="/" id="subtitle">ahjwen</a>
-        </h2>
-      
+
+    
+        <body id="scheme-Paradox" class="lazy">
+            <div class="material-layout  mdl-js-layout has-drawer is-upgraded">
+                
+
+                <!-- Main Container -->
+                <main class="material-layout__content" id="main">
+
+                    <!-- Top Anchor -->
+                    <div id="top"></div>
+
+                    
+                        <!-- Hamburger Button -->
+                        <button class="MD-burger-icon sidebar-toggle">
+                            <span class="MD-burger-layer"></span>
+                        </button>
+                    
+
+                    <!-- Index Module -->
+<div class="material-index mdl-grid">
+    
+        <!-- Paradox Header -->
+        <!-- Daily pic -->
+<div class="mdl-card mdl-shadow--2dp daily-pic mdl-cell mdl-cell--8-col index-top-block">
+
+    <!-- Pic & Slogan -->
+    <div class="mdl-card__media mdl-color-text--grey-50" style="background-image:url(/img/daily_pic.png)">
+        <p class="index-top-block-slogan"><a href="#">
+        
+            
+                Hi, nice to meet you
+            
+        
+        </a></p>
     </div>
-    <div id="header-inner" class="inner">
-      <nav id="main-nav">
-        <a id="main-nav-toggle" class="nav-icon"></a>
-        
-          <a class="main-nav-link" href="/">Home</a>
-        
-          <a class="main-nav-link" href="/archives">Archives</a>
-        
-      </nav>
-      <nav id="sub-nav">
-        
-          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
-        
-        <a id="nav-search-btn" class="nav-icon" title="Zoeken"></a>
-      </nav>
-      <div id="search-form-wrap">
-        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="ahjwen.github.io"></form>
-      </div>
+
+    <!-- Avatar & Name -->
+    <div class="mdl-card__supporting-text meta mdl-color-text--grey-600">
+        <!-- Author Avatar -->
+        <div id="author-avatar">
+            <img src="/img/avatar.png" width="32px" height="32px" alt="avatar">
+        </div>
+        <div>
+            <strong>ahjwen</strong>
+        </div>
     </div>
-  </div>
-</header>
-      <div class="outer">
-        <section id="main">
-  
-    <article id="post-微软FLow自动化事务备份ftp文件到网盘" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2018/06/11/微软FLow自动化事务备份ftp文件到网盘/" class="article-date">
-  <time datetime="2018-06-11T07:30:07.000Z" itemprop="datePublished">2018-06-11</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/06/11/微软FLow自动化事务备份ftp文件到网盘/">微软FLow自动化事务备份ftp文件到网盘</a>
-    </h1>
-  
+</div>
 
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="微软FLow自动化事务备份ftp文件到网盘"><a href="#微软FLow自动化事务备份ftp文件到网盘" class="headerlink" title="微软FLow自动化事务备份ftp文件到网盘"></a>微软FLow自动化事务备份ftp文件到网盘</h1><blockquote>
-<p> 2018年6月5日, 星期二</p>
-</blockquote>
-<hr>
-<p>  ow是微软推出的一项很cool的服务，通过这项服务你可以创建编写很多任务，处理时常的种种事务，如果你拥有office的账户则可以直接使用flow，如果没有账户的话需要申请微软账户后才可以使用，FLow有三个版本可以选择，高级版本可以免费使用90天，但是一般免费版本的用量已经足够使用。可以实现的常见任务有：保存FTP或者服务器的文件到网盘（onedrive等等主流网盘）。保存邮件到excel，保存邮件附件到网盘，保存网络相册照片到网盘等。当然你也可以编写一个自己的FLOW,还可以实现国外社交网站，更新内容备份等等，你能想到的基本都可以</p>
-<p>  相关链接：<a href="http://www.9mf.net/go?url=https://asia.flow.microsoft.com/zh-cn/" target="_blank" rel="external">FLow官网</a>  教程以FTP文件备份到onedrive为例子。<br><img src="https://i.loli.net/2018/06/05/5b16aade80cac.jpg" alt="flow-1-300x144.jpg"></p>
-<p>1.打开网站登录你的微软账户。选择国家初始化账户。<br><img src="https://i.loli.net/2018/06/05/5b16ab8b20b84.jpg" alt="flow-2-300x169.jpg"><br>2.搜索模板关键字“ftp”，然后选择FTP备份到onedrive。<br><img src="https://i.loli.net/2018/06/05/5b16abd77ad7b.jpg" alt="flow-3-300x98.jpg"><br>3.选择模板，点击创建输入你的FTP信息，onedrive信息会自动读取，配置完成后点击继续。<br><img src="https://i.loli.net/2018/06/05/5b16acc9f1b78.png" alt="3@5D{EB}_3$G`F30DDX1`NJ.png"><br><img src="https://i.loli.net/2018/06/05/5b16acc7833e5.jpg" alt="flow-5-287x300 (1).jpg"><br><img src="https://i.loli.net/2018/06/05/5b16acc9685ba.jpg" alt="flow-6-300x135 (1).jpg"><br>4.设置目标目录和你要备份到的网盘目录。然后保存流。<br><img src="https://i.loli.net/2018/06/05/5b16ad1fa696a.jpg" alt="flow-7-300x135.jpg"><br>5.最后一定要开启流才可以，由于这个计划是FTP文件变动才会触发同步，我们在FTP新加一个文件，就会自动同步了，同步备份记录可以在运行那里看到。</p>
+        <!-- Blog info -->
+<div class="mdl-card mdl-shadow--2dp something-else mdl-cell mdl-cell--8-col mdl-cell--4-col-desktop index-top-block">
 
-      
+    <!-- Search -->
+    
+    <!-- Google -->
+    <div class="mdl-textfield mdl-js-textfield mdl-textfield--expandable" method="post" action="">
+        <label id="search-label" class="mdl-button mdl-js-ripple-effect mdl-js-button mdl-button--fab mdl-color--accent mdl-shadow--4dp" for="search">
+            <i class="material-icons mdl-color-text--white" role="presentation">search</i>
+        </label>
+
+        <form autocomplete="off" id="search-form" method="get" action="//google.com/search" accept-charset="UTF-8" class="mdl-textfield__expandable-holder" target="_blank">
+            <input class="mdl-textfield__input search-input" type="search" name="q" id="search" placeholder="">
+            <label id="search-form-label" class="mdl-textfield__label" for="search"></label>
+
+            <input type="hidden" name="sitesearch" value="ahjwen.github.io">
+        </form>
     </div>
-    <footer class="article-footer">
-      <a data-url="ahjwen.github.io/2018/06/11/微软FLow自动化事务备份ftp文件到网盘/" data-id="cji9xvjyp0001xka9t97qrvja" class="article-share-link">Delen</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
 
 
-  
-    <article id="post-ahjwen" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2018/05/09/ahjwen/" class="article-date">
-  <time datetime="2018-05-09T14:59:20.000Z" itemprop="datePublished">2018-05-09</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/05/09/ahjwen/">2018最新EDU邮箱申请-无限谷歌网盘，Office365教育版</a>
-    </h1>
-  
 
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>无限谷歌存储空间，还能变成1EB的电脑硬盘。首先申请edu邮箱，就可以解锁标题所有姿势。</p>
-<p>先打一针，以下全程需要特殊网络，能打开谷歌那种网络。</p>
-<p>过程如有问题，请留言<br>划重点：<br>全程特殊网络，全程PC操作，手机操作可能出现奇怪问题。<br>1.get美区虚拟身份： <a href="http://t.cn/REMDIU2" target="_blank" rel="external">http://t.cn/REMDIU2</a><br>或者用： <a href="http://suo.im/3dL5kG" target="_blank" rel="external">http://suo.im/3dL5kG</a><br>2.在线申请教育账户，按步骤操作，解锁申请系统和申请学校，一起的： <a href="http://suo.im/49khtU" target="_blank" rel="external">http://suo.im/49khtU</a><br>3.收到教育ID后，登陆管理系统，get邮箱： <a href="http://t.cn/REMDmNM" target="_blank" rel="external">http://t.cn/REMDmNM</a><br>4.Gmail和谷歌网盘地址就不用发了吧，补下用这邮箱激活office365的地址： <a href="http://suo.im/4kyfP4" target="_blank" rel="external">http://suo.im/4kyfP4</a><br>全程特殊网络，全程PC操作，手机操作可能出现奇怪问题。<br>—-    华丽的分割线，，，接下来就要开始真正的表演了…</p>
-<p>获取一份美国人虚拟身份信息；first，去虚拟身份网站。英文车：<a href="https://www.fakenamegenerator.com/" target="_blank" rel="external">https://www.fakenamegenerator.com/</a>  中文车：<a href="http://www.haoweichi.com/Index/random" target="_blank" rel="external">http://www.haoweichi.com/Index/random</a><br><img src="https://i.loli.net/2018/05/10/5af4638f6696d.png" alt="1.png"><br>get一个美区虚拟身份。 【注意，XXX的信息，需要登陆网站才会显示。】<br><img src="https://i.loli.net/2018/05/10/5af4638f257e5.jpeg" alt="2.jpeg"><br>get信息后，去申请申请网站的账号。你没看错，申请X2。开通这个教育版账号，需要另一套申请系统的账号。 车牌号 ：<a href="https://www.opencccapply.net/uPortal/f/u66l1s1000/normal/render.uP" target="_blank" rel="external">https://www.opencccapply.net/uPortal/f/u66l1s1000/normal/render.uP</a><br><img src="https://i.loli.net/2018/05/10/5af4638f245dd.jpeg" alt="3.jpeg"><br>需要用到你自己邮箱，尽量用谷歌邮箱，尽量用国外邮箱，QQ之类还是自己留着玩吧。<br><img src="https://i.loli.net/2018/05/10/5af4638f33b9e.jpeg" alt="4.jpeg"><br>填入虚拟的姓名。【其他都可以选No。】<br><img src="https://i.loli.net/2018/05/10/5af4638f35f48.jpeg" alt="5.jpeg"><br>填入对应的生日。【关键信息，务必截图保存！！！】<br><img src="https://i.loli.net/2018/05/11/5af46e845a28c.jpeg" alt="6.jpeg"><br>填入对应的SSN。【据说也可以勾选没有SSN，不过我没试过。】<br><img src="https://i.loli.net/2018/05/11/5af46e845786f.jpeg" alt="7.jpeg"><br>填入自己的邮箱。【Repeat，尽量用谷歌邮箱，尽量用国外邮箱。】<br><img src="https://i.loli.net/2018/05/11/5af46e844c9d1.jpeg" alt="8.jpeg"><br>填入虚拟的手机号。【填一个就行，第二个空着不用管。】<br><img src="https://i.loli.net/2018/05/11/5af46e845616c.jpeg" alt="9.jpeg"><br>填入对应的地址。【虚拟地址，有可能会报错。 】<br><img src="https://i.loli.net/2018/05/11/5af46e8454ae4.jpeg" alt="10.jpeg"><br>别急，报错后，勾上最下面的选项。<br><img src="https://i.loli.net/2018/05/11/5af46e844b5d8.jpeg" alt="11.jpeg"><br>设置你想要的用户名和密码。【注意，密码仅限数字和字母，不能用符号，否则报错。】【这就是你教育账号登录密码】<br><img src="https://i.loli.net/2018/05/11/5af46e844dea0.jpeg" alt="12.jpeg"><br>设置你想要的安全码。【注意，安全码仅限数字，4位数字。】<br><img src="https://i.loli.net/2018/05/11/5af46e84391e0.jpeg" alt="13.jpeg"><br>设置你想要的安全问题和答案。<br><img src="https://i.loli.net/2018/05/11/5af46e8458ef7.jpeg" alt="14.jpeg"><br>进行人机身份验证。【这玩意是谷歌的，So，你懂的。】<br><img src="https://i.loli.net/2018/05/11/5af46e842e314.jpeg" alt="15.jpeg"><br>验证通过后，申请网站的账号就已申请到。<br><img src="https://i.loli.net/2018/05/11/5af4719c7fc8f.jpeg" alt="16.jpeg"><br>开始申请教育版账号。【框中的学校，不要选错。如图这个才是对的。】<br><img src="https://i.loli.net/2018/05/11/5af4719c8ad9d.jpeg" alt="17.jpeg"><br>会先哔哔一些注意事项，不用细看，直接开始。<br><img src="https://i.loli.net/2018/05/11/5af4719cb0d7f.jpeg" alt="18.jpeg"></p>
-<p>注意，以下都是选择题，看得懂就自己选，偷懒就跟我选一样滴。<br>确认学期和专业。<br><img src="https://i.loli.net/2018/05/11/5af4719cb68a8.jpeg" alt="19.jpeg"><br>确认个人信息。<br><img src="https://i.loli.net/2018/05/11/5af4719cb817e.jpeg" alt="20.jpeg"><br>勾选下面这个就行，不用再填一遍。<br><img src="https://i.loli.net/2018/05/11/5af4719cab5cc.jpeg" alt="21.jpeg"><br>继续确认个人信息，选择性别以及。。。性取向。<br><img src="https://i.loli.net/2018/05/11/5af4719cb98e8.jpeg" alt="22.jpeg"><br>还要选择以下这3样。<br><img src="https://i.loli.net/2018/05/11/5af4719cb22ee.jpeg" alt="23.jpeg"><br><img src="https://i.loli.net/2018/05/11/5af4719caf726.jpeg" alt="24.jpeg"><br><img src="https://i.loli.net/2018/05/11/5af4719cae054.jpeg" alt="25.jpeg"><br>确认受教育水平。<br><img src="https://i.loli.net/2018/05/11/5af4729fad33b.jpeg" alt="26.jpeg"><br><img src="https://i.loli.net/2018/05/11/5af4729fb8da3.jpeg" alt="27.jpeg"><br><img src="https://i.loli.net/2018/05/11/5af4729fc9021.jpeg" alt="28.jpeg"><br>确认公民信息。<br><img src="https://i.loli.net/2018/05/11/5af4729fefabb.jpeg" alt="29.jpeg"><br>确认居住信息。<br><img src="https://i.loli.net/2018/05/11/5af4729fe0ae0.jpeg" alt="30.jpeg"><br><img src="https://i.loli.net/2018/05/11/5af4729fee393.jpeg" alt="31.jpeg"><br>确认兴趣爱好。<br><img src="https://i.loli.net/2018/05/11/5af472a03b4dc.jpeg" alt="32.jpeg"><br><img src="https://i.loli.net/2018/05/11/5af472a03aed4.jpeg" alt="33.jpeg"><br>确认一些额外信息。<br><img src="https://i.loli.net/2018/05/11/5af472a03baba.jpeg" alt="34.jpeg"><br>能选不想回答的问题，就都不想回答。<br><img src="https://i.loli.net/2018/05/11/5af472a0430a4.jpeg" alt="35.jpeg"><br><img src="https://i.loli.net/2018/05/11/5af4732b32496.jpeg" alt="36.jpeg"><br>确认接受各种条款。<br><img src="https://i.loli.net/2018/05/11/5af4732b393a2.jpeg" alt="37.jpeg"><br>复查之前的各种选择。<br><img src="https://i.loli.net/2018/05/11/5af4732b5d62e.jpeg" alt="38.jpeg"><br>直接拖到下方，提交申请。<br><img src="https://i.loli.net/2018/05/11/5af4732b45047.jpeg" alt="39.jpeg"><br>还没完，打勾确认隐私条款。<br><img src="https://i.loli.net/2018/05/11/5af4732b5c0a9.jpeg" alt="40.jpeg"><br>之后，你的申请才能正式提交。<br><img src="https://i.loli.net/2018/05/11/5af4732b545bb.jpeg" alt="41.jpeg"><br>等3到5分钟，邮箱里会收到几封邮件，其中一封会带上你的教育ID。【收到ID，才算是申请成功。之后，用这ID去管理系统，get教育邮箱。】<br><img src="https://i.loli.net/2018/05/11/5af4732b4c622.jpeg" alt="42.jpeg"><br>登陆账号管理系统。【之前截图保存的信息有用了。默认密码是你最开始填写的生日信息，按月日年排布。比如我申请时用的06.17.1998，转换后就是061798。】<a href="https://smccis.smc.edu/smcweb/f?p=420180314:102" target="_blank" rel="external">https://smccis.smc.edu/smcweb/f?p=420180314:102</a>::::::<br><img src="https://i.loli.net/2018/05/11/5af4732b559a2.jpeg" alt="43.jpeg"><br>首次登陆，提示需要升级账号。<br><img src="https://i.loli.net/2018/05/11/5af4732b49d82.jpeg" alt="44.jpeg"><br>那就升级呗，升级前会重复一遍账号密码<br><img src="https://i.loli.net/2018/05/11/5af4732b52e18.jpeg" alt="45.jpeg"><br>同意各种条款。<br><img src="https://i.loli.net/2018/05/11/5af47401c5961.jpeg" alt="46.jpeg"><br>设置安全问题。<br><img src="https://i.loli.net/2018/05/11/5af47401c864d.jpeg" alt="47.jpeg"><br>修改登陆密码。<br><img src="https://i.loli.net/2018/05/11/5af47401c719d.jpeg" alt="48.jpeg"><br>再次登陆账号管理系统。<br><img src="https://i.loli.net/2018/05/11/5af4740135dc0.jpeg" alt="49.jpeg"><br>还会哔哔一堆，不用细看，挨个确认就行。<br><img src="https://i.loli.net/2018/05/11/5af47401938e5.jpeg" alt="50.jpeg"><br><img src="https://i.loli.net/2018/05/11/5af4740194f4d.jpeg" alt="51.jpeg"><br><img src="https://i.loli.net/2018/05/11/5af47401a0b70.jpeg" alt="52.jpeg"><br>终于，终于进入管理系统。【功能很多，基本用不上，除了邮箱的快捷入口。】<br><img src="https://i.loli.net/2018/05/11/5af47401afcea.jpeg" alt="53.jpeg"><br>直接看页面最下方吧，才是我们需要的信息：邮箱账户名和邮箱地址。【注意，实际使用时，不要直接复制，把大写字母换成小写才能用。】<br>PS：云盘登录时提示：INVALID username or password！<br>答：用户名是下边的用户名，密码是你设置的密码，别以为是下边password后缀的就是密码，我就因为这个一直登录不进去云盘，蒙蔽了好久。<br><img src="https://i.loli.net/2018/05/11/5af47401b4974.jpeg" alt="54.jpeg"><br>用邮箱地址，登入谷歌邮箱，没毛病。<br><img src="https://i.loli.net/2018/05/11/5af47401b33c3.jpeg" alt="55.jpeg"><br><img src="https://i.loli.net/2018/05/11/5af4765ec7211.jpeg" alt="56.jpeg"><br>看看网盘容量。<br><img src="https://i.loli.net/2018/05/11/5af4765ed397a.jpeg" alt="57.jpeg"><br>仔细看几遍。<br><img src="https://i.loli.net/2018/05/11/5af4765ed5047.jpeg" alt="58.jpeg"><br>安装谷歌官方的管理软件。<br><img src="https://i.loli.net/2018/05/11/5af4765ee025f.jpeg" alt="59.jpeg"><br>1EB的电脑硬盘，嘿嘿。 google 虚拟云端硬盘应用→ WINDOWS：<a href="https://g.co/GetDriveFileStream" target="_blank" rel="external">https://g.co/GetDriveFileStream</a>   MAC：<a href="https://dl.google.com/drive-file-stream/googledrivefilestream.dmg" target="_blank" rel="external">https://dl.google.com/drive-file-stream/googledrivefilestream.dmg</a><br><img src="https://i.loli.net/2018/05/11/5af4765ee4519.jpeg" alt="60.jpeg"><br>这教育账号还有个小福利。<br><img src="https://i.loli.net/2018/05/11/5af4765ee2de0.jpeg" alt="61.jpeg"><br>可以开通微软Office365教育版，能用在线版Office，以及微软的OneDrive网盘。<br><img src="https://i.loli.net/2018/05/11/5af4765ee186b.jpeg" alt="62.jpeg"></p>
-<p>–到此结束。</p>
 
-      
+
+
+
+    <!-- LOGO -->
+    <div class="something-else-logo mdl-color--white mdl-color-text--grey-600">
+        <a href="#" target="_blank">
+            <img src="/img/logo.png" alt="logo" />
+        </a>
     </div>
-    <footer class="article-footer">
-      <a data-url="ahjwen.github.io/2018/05/09/ahjwen/" data-id="cji9xvjz40003xka9fgnt55fx" class="article-share-link">Delen</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
 
+    <!-- Infomation -->
+    <div class="mdl-card__supporting-text meta meta--fill mdl-color-text--grey-600">
+        <!-- Blog Title -->
+        <div>
+            <strong>ahjwen</strong>
+        </div>
+        <div class="section-spacer"></div>
 
-  
-    <article id="post-index" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2018/04/29/index/" class="article-date">
-  <time datetime="2018-04-29T05:35:58.000Z" itemprop="datePublished">2018-04-29</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/04/29/index/">index</a>
-    </h1>
-  
+        <!-- Pages -->
+        <button id="show-pages-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+            <i class="material-icons" role="presentation">view_carousel</i>
+            <span class="visuallyhidden">Pages</span>
+        </button>
+        <ul class="mdl-menu mdl-js-menu mdl-menu--bottom-right" for="show-pages-button">
+            
+        </ul>
 
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>223</p>
+        <!-- Menu -->
+        <button id="menubtn" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+            <i class="material-icons" role="presentation">more_vert</i>
+            <span class="visuallyhidden">show menu</span>
+        </button>
+        <ul class="mdl-menu mdl-js-menu mdl-menu--bottom-right" for="menubtn">
+            
 
-      
+            
+
+            
+                <a class="index_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=ahjwen&url=ahjwen.github.io&pic=ahjwen.github.io/img/favicon.png&searchPic=false&style=simple" target="_blank">
+                    <li class="mdl-menu__item mdl-js-ripple-effect">
+                        شارك على Weibo
+                    </li>
+                </a>
+            
+
+            
+                <a class="index_share-link" href="https://twitter.com/intent/tweet?text=ahjwen&url=ahjwen.github.io&via=ahjwen" target="_blank">
+                    <li class="mdl-menu__item mdl-js-ripple-effect">
+                        شارك على Twitter
+                    </li>
+                </a>
+            
+
+            
+                <a class="index_share-link" href="https://www.facebook.com/sharer/sharer.php?u=ahjwen.github.io" target="_blank">
+                    <li class="mdl-menu__item mdl-js-ripple-effect">
+                        شارك على Facebook
+                    </li>
+                </a>
+            
+
+            
+                <a class="index_share-link" href="https://plus.google.com/share?url=ahjwen.github.io" target="_blank">
+                    <li class="mdl-menu__item mdl-js-ripple-effect">
+                        شارك على Google+
+                    </li>
+                </a>
+            
+
+            
+
+            
+
+            
+        </ul>
     </div>
-    <footer class="article-footer">
-      <a data-url="ahjwen.github.io/2018/04/29/index/" data-id="cji9xvjyt0002xka995094ru6" class="article-share-link">Delen</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
+</div>
 
+    
+    <div class="locate-thumbnail-symbol"></div>
 
-  
-    <article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2018/01/07/hello-world/" class="article-date">
-  <time datetime="2018-01-07T10:47:48.290Z" itemprop="datePublished">2018-01-07</time>
-</a>
+    <!-- Pin on top -->
     
-  </div>
-  <div class="article-inner">
+
+    <!-- Normal Post -->
     
-    
-      <header class="article-header">
         
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/01/07/hello-world/">Hello World</a>
-    </h1>
-  
-
-      </header>
+            
+                <!-- Paradox Thumbnail -->
+                <div class="post_entry-module mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col fade out">
+    <!-- Post Thumbnail -->
     
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p><img src="https://portablehexo.bitmoe.cn/hexopp/hexop.png" alt=""></p>
-<blockquote>
-<p><strong>本版本仅适用于Win环境</strong><br>本文关键字： <strong>Hexo绿色版</strong>，<strong>Hexo便携版</strong>，<strong>Hexo配置</strong>，<strong>Hexo</strong>，<strong>U盘</strong></p>
-</blockquote>
-<p><a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>是一个快速、简洁且高效的博客框架，支持 GitHub Flavored Markdown 的所有功能；具有超快生成速度，让上百个页面在几秒内瞬间完成渲染；还拥有各式各样的插件等等。</p>
-<p>但是就像很多教程里面写的那样，搭建 Hexo 本地环境，需要安装 Node.js、Git 以及使用 npm 进行安装和配置。这对于毫无经验的新手来说，是一个很大的挑战。同时，由于这些环境的存在，导致如果需要更换计算机的时候，重新安装配置一个新的Hexo环境，又得花费一些功夫。</p>
-<p>所以呢，锵锵，我们整合了一个 Hexo 便携版，来简化本地环境的部署。</p>
-<p>####<strong>版本介绍</strong><br>那么所谓的便携版到底是什么？便携版就是将 Hexo 本地环境所需要的各种依赖环境的整合到一起，做成的不需要安装的版本。</p>
-<p>本便携版（Release 1.0.0）所包含的软件如下：</p>
-<blockquote>
-<ul>
-<li>Git: 2.7.4</li>
-<li>Nodejs: 6.10.1</li>
-<li>Npm: 4.4.1</li>
-<li>Hexo: 3.2.2</li>
+        
+            <!-- Random Thumbnail -->
+            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
+        
+    
+
+        <!-- Post Title -->
+        <p class="article-headline-p"><a href="/2018/06/11/微软FLow自动化事务备份ftp文件到网盘/">微软FLow自动化事务备份ftp文件到网盘</a></p>
+    </div>
+
+    <!-- Post Excerpt -->
+    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
+        
+            
+        
+        &nbsp;&nbsp;&nbsp;
+        <span>
+            <a href="/2018/06/11/微软FLow自动化事务备份ftp文件到网盘/" target="_self">واصل القراءة</a>
+        </span>
+    </div>
+    <!-- Post_entry Info-->
+    <div id="post_entry-info">
+        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
+            <!-- Author Avatar -->
+            <div id="author-avatar">
+                <img src="/img/avatar.png" width="44px" height="44px" alt="ahjwen's avatar">
+            </div>
+            <div>
+                <strong>ahjwen</strong>
+                <span>Jun 11, 2018</span>
+            </div>
+        </div>
+        <div id="post_entry-right-info">
+          
+
+            
+
+            
+
+            <!-- Post Views -->
+            <span class="post_entry-views">
+            </span>
+        </div>
+    </div>
+</div>
+
+            
+            
+        
+    
+        
+            
+                <!-- Paradox Thumbnail -->
+                <div class="post_entry-module mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col fade out">
+    <!-- Post Thumbnail -->
+    
+        
+            <!-- Random Thumbnail -->
+            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
+        
+    
+
+        <!-- Post Title -->
+        <p class="article-headline-p"><a href="/2018/05/09/ahjwen/">2018最新EDU邮箱申请-无限谷歌网盘，Office365教育版</a></p>
+    </div>
+
+    <!-- Post Excerpt -->
+    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
+        
+            无限谷歌存储空间，还能变成1EB的电脑硬盘。首先申请edu邮箱，就可以解锁标题所有姿势。
+先打一针，以下全程需要特殊网络，能打开谷歌那...
+        
+        &nbsp;&nbsp;&nbsp;
+        <span>
+            <a href="/2018/05/09/ahjwen/" target="_self">واصل القراءة</a>
+        </span>
+    </div>
+    <!-- Post_entry Info-->
+    <div id="post_entry-info">
+        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
+            <!-- Author Avatar -->
+            <div id="author-avatar">
+                <img src="/img/avatar.png" width="44px" height="44px" alt="ahjwen's avatar">
+            </div>
+            <div>
+                <strong>ahjwen</strong>
+                <span>May 09, 2018</span>
+            </div>
+        </div>
+        <div id="post_entry-right-info">
+          
+
+            
+
+            
+
+            <!-- Post Views -->
+            <span class="post_entry-views">
+            </span>
+        </div>
+    </div>
+</div>
+
+            
+            
+        
+    
+        
+            
+                <!-- Paradox Thumbnail -->
+                <div class="post_entry-module mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col fade out">
+    <!-- Post Thumbnail -->
+    
+        
+            <!-- Random Thumbnail -->
+            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
+        
+    
+
+        <!-- Post Title -->
+        <p class="article-headline-p"><a href="/2018/04/29/index/">index</a></p>
+    </div>
+
+    <!-- Post Excerpt -->
+    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
+        
+            223
+
+        
+        &nbsp;&nbsp;&nbsp;
+        <span>
+            <a href="/2018/04/29/index/" target="_self">واصل القراءة</a>
+        </span>
+    </div>
+    <!-- Post_entry Info-->
+    <div id="post_entry-info">
+        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
+            <!-- Author Avatar -->
+            <div id="author-avatar">
+                <img src="/img/avatar.png" width="44px" height="44px" alt="ahjwen's avatar">
+            </div>
+            <div>
+                <strong>ahjwen</strong>
+                <span>Apr 29, 2018</span>
+            </div>
+        </div>
+        <div id="post_entry-right-info">
+          
+
+            
+
+            
+
+            <!-- Post Views -->
+            <span class="post_entry-views">
+            </span>
+        </div>
+    </div>
+</div>
+
+            
+            
+        
+    
+        
+            
+                <!-- Paradox Thumbnail -->
+                <div class="post_entry-module mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col fade out">
+    <!-- Post Thumbnail -->
+    
+        
+            <!-- Random Thumbnail -->
+            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
+        
+    
+
+        <!-- Post Title -->
+        <p class="article-headline-p"><a href="/2018/01/07/hello-world/">Hello World</a></p>
+    </div>
+
+    <!-- Post Excerpt -->
+    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
+        
+            
+
+        
+        &nbsp;&nbsp;&nbsp;
+        <span>
+            <a href="/2018/01/07/hello-world/" target="_self">واصل القراءة</a>
+        </span>
+    </div>
+    <!-- Post_entry Info-->
+    <div id="post_entry-info">
+        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
+            <!-- Author Avatar -->
+            <div id="author-avatar">
+                <img src="/img/avatar.png" width="44px" height="44px" alt="ahjwen's avatar">
+            </div>
+            <div>
+                <strong>ahjwen</strong>
+                <span>Jan 07, 2018</span>
+            </div>
+        </div>
+        <div id="post_entry-right-info">
+          
+
+            
+
+            
+
+            <!-- Post Views -->
+            <span class="post_entry-views">
+            </span>
+        </div>
+    </div>
+</div>
+
+            
+            
+        
+    
+
+    
+
+    
+        <script type="text/ls-javascript" id="thumbnail-script">
+    var randomNum;
+
+    var locatePost = $('.locate-thumbnail-symbol').next();
+    for(var i = 0; i < 10; i++) {
+        randomNum = Math.floor(Math.random() * 19 + 1);
+
+        locatePost.children('.post_thumbnail-random').attr('id', 'random_thumbnail-'+randomNum);
+        locatePost.children('.post_thumbnail-random').attr('data-original', '/img/random/material-' + randomNum + '.png');
+    $('.post_thumbnail-random').addClass('lazy');
+
+        locatePost = locatePost.next();
+    }
+</script>
+
+    
+</div>
+
+
+                    
+                        <!-- Overlay For Active Sidebar -->
+<div class="sidebar-overlay"></div>
+
+<!-- Material sidebar -->
+<aside id="sidebar" class="sidebar sidebar-colored sidebar-fixed-left" role="navigation">
+    <div id="sidebar-main">
+        <!-- Sidebar Header -->
+        <div class="sidebar-header header-cover" style="background-image: url(/img/sidebar_header.png);">
+    <!-- Top bar -->
+    <div class="top-bar"></div>
+
+    <!-- Sidebar toggle button -->
+    <button type="button" class="sidebar-toggle mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" style="display: initial;" data-upgraded=",MaterialButton,MaterialRipple">
+        <i class="material-icons">clear_all</i>
+        <span class="mdl-button__ripple-container">
+            <span class="mdl-ripple">
+            </span>
+        </span>
+    </button>
+
+    <!-- Sidebar Avatar -->
+    <div class="sidebar-image">
+        <img src="/img/avatar.png" alt="ahjwen's avatar">
+    </div>
+
+    <!-- Sidebar Email -->
+    <a data-toggle="dropdown" class="sidebar-brand" href="#settings-dropdown">
+        youremail@email.com
+        <b class="caret"></b>
+    </a>
+</div>
+
+
+        <!-- Sidebar Navigation  -->
+        <ul class="nav sidebar-nav">
+    <!-- User dropdown  -->
+    <li class="dropdown">
+        <ul id="settings-dropdown" class="dropdown-menu">
+            
+                <li>
+                    <a href="#" target="_blank" title="Email Me">
+                        
+                            <i class="material-icons sidebar-material-icons sidebar-indent-left1pc-element">email</i>
+                        
+                        Email Me
+                    </a>
+                </li>
+            
+        </ul>
+    </li>
+
+    <!-- Homepage -->
+    
+        <li id="sidebar-first-li">
+            <a href="/">
+                
+                    <i class="material-icons sidebar-material-icons">home</i>
+                
+                الرئيسية
+            </a>
+        </li>
+        
+    
+
+    <!-- Archives  -->
+    
+        <li class="dropdown">
+            <a href="#" class="ripple-effect dropdown-toggle" data-toggle="dropdown">
+                
+                    <i class="material-icons sidebar-material-icons">inbox</i>
+                
+                    أرشيف
+                <b class="caret"></b>
+            </a>
+            <ul class="dropdown-menu">
+            <li>
+                <a class="sidebar_archives-link" href="/archives/2018/06/">June 2018<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/05/">May 2018<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/04/">April 2018<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/01/">January 2018<span class="sidebar_archives-count">1</span></a>
+            </ul>
+        </li>
+        
+    
+
+    <!-- Categories  -->
+    
+
+    <!-- Pages  -->
+    
+
+    <!-- Article Number  -->
+    
 </ul>
-</blockquote>
-<p>为了便携的需要，不能配置固定的环境变量，所以除此之外还有相应的批处理文件，下文将详细介绍。</p>
-<p>####<strong>从零开始，1分钟搭建Hexo写作环境</strong><br>说了这么多，我们这就开始教你如何在1分钟内，从零开始搭建Hexo写作环境！</p>
-<p>#####1 注册一个Github帐号</p>
-<p>1.1 进入<a href="https://github.com" target="_blank" rel="external">Github</a>，并在右边的3个框框中分别填写 用户名、邮箱地址、账户密码，并点击 <strong><code>Sign up for Github</code></strong>;</p>
-<p><img src="https://portablehexo.bitmoe.cn/hexopp/hexop2.png" alt="图1.1.1"></p>
-<p>1.2 进入欢迎页面后，点击<strong><code>Finish sign up</code></strong>;</p>
-<p><img src="https://portablehexo.bitmoe.cn/hexopp/hexop3.png" alt="图1.2.1"></p>
-<p>1.3 进入到这一步之后（<strong>图1.3.1</strong>），先别记着点任何东西，查看你的邮箱，应该会收到如下的邮件（<strong>图1.3.2</strong>），确认你的邮件。否则，你会看到错误页面（<strong>图1.3.3</strong>）。query完毕之后在<strong>图1.3.1</strong>所示的页面，点击<strong><code>+ New repository</code></strong>;</p>
-<p><img src="https://portablehexo.bitmoe.cn/hexopp/hexop5.png" alt="图1.3.1"></p>
-<p><img src="https://portablehexo.bitmoe.cn/hexopp/hexop6.png" alt="图1.3.2"></p>
-<p><img src="https://portablehexo.bitmoe.cn/hexopp/hexop7.png" alt="图1.3.3"></p>
-<p>1.4 请在红框中的 <strong><code>Repository name</code></strong> 里面输入 <strong><code>用户名.github.io</code></strong> ( <strong>用户名</strong> 就是你刚刚 <strong>步骤1.1</strong> 中注册的用户名)，然后点击 <strong><code>Create repository</code></strong>;</p>
-<p><img src="https://portablehexo.bitmoe.cn/hexopp/hexop8.png" alt="图1.4.1"></p>
-<p>1.5 至此，Github网页注册的部分完毕</p>
-<p>####2 下载HEXO Portable</p>
-<p>2.1 访问我们的 <a href="https://project.bitmoe.cn/PortableHexo/" target="_blank" rel="external">HEXO Portable</a> 页面，或者 <a href="https://github.com/Bitmoe/PortableHexo" target="_blank" rel="external">Github仓库</a> 下载最新的便携版；</p>
-<p>2.2 双击得到的自解压文件，解压到你需要安装博客的地方，可以选择硬盘或者U盘；</p>
-<p>####3 配置你的环境</p>
-<p>3.1 在你的博客的文件夹，你会发现很多批处理文件，我先介绍下各个文件的用途：</p>
-<blockquote>
-<ul>
-<li>配置基本信息 &gt;&gt; 配置博客的基本环境</li>
-<li>配置Github部署 &gt;&gt; 配置博客的部署</li>
-<li>启动命令行 &gt;&gt; 启动带环境变量的Git-Bash，否则无法使用node、npm、git等命令</li>
-<li>新建文章 &gt;&gt; 新建一篇文章</li>
-<li>渲染并本地测试 &gt;&gt; 生成并本地预览</li>
-<li>渲染并部署 &gt;&gt; 生成并部署到GitHub</li>
-<li>重置配置文件 &gt;&gt; 重置_config.yml</li>
-</ul>
-</blockquote>
-<p>3.2 我们继续进行环境配置，双击<strong><code>配置基本信息</code></strong>并按顺序输入以下信息：</p>
-<blockquote>
-<ul>
-<li>主标题：顾名思义</li>
-<li>副标题：顾名思义</li>
-<li>描述：顾名思义</li>
-<li>作者：顾名思义</li>
-<li>网站地址：填写 <strong>用户名.github.io</strong> （此处的用户名为<strong>步骤1.1</strong>中填写的用户名）<br><strong>如果您已经购买了域名，可以参看相关的文章！</strong></li>
-</ul>
-</blockquote>
-<p>3.3 双击<strong><code>配置Github部署</code></strong>并按顺序输入以下信息：</p>
-<blockquote>
-<ul>
-<li>Github的用户名：此处的用户名为<strong>步骤1.1</strong>中填写的用户名</li>
-<li>Github注册邮箱：此处的注册邮箱为<strong>步骤1.1</strong>中填写的注册邮箱</li>
-</ul>
-</blockquote>
-<p>3.4 输入完毕之后，会进行测试部署，等待屏幕提示<strong>下面将进行部署测试，稍后将有一个openssh的对话框出现，请输入你的github用户密码。</strong>的时候，按回车继续；（此处的用户密码为<strong>步骤1.1</strong>中填写的用户密码）</p>
-<p>3.5 然后继续等待，此时屏幕会出现n多行，耐心等待即可；</p>
-<p>3.6 等待屏幕提示<strong>请访问 <a href="https://用户名.github.io" target="_blank" rel="external">https://用户名.github.io</a> 查看是否部署成功！</strong>的时候，在浏览器中输入<strong><a href="https://用户名.github.io" target="_blank" rel="external">https://用户名.github.io</a> </strong>，理论上可以看到你的Hexo站点！（此处的用户名为<strong>步骤1.1</strong>中填写的用户名）</p>
-<p>3.7 至此，你的Hexo环境就配置完成了，这样你的这个Hexo博客文件夹无论移动到哪一台电脑，都能通过<strong>启动命令行</strong>出现的bash命令行，或者其余便捷的批处理文件比如<strong>新建文章</strong>、<strong>渲染并本地测试</strong>、<strong>渲染并部署</strong>进行相应的操作。</p>
-<p>3.8 如果你在配置中出错，可以运行<strong>重置配置文件</strong>后，再重复<strong>3.1~3.6步骤</strong></p>
-<p>####4 开始享受纯粹的Hexo写作吧！</p>
-<p>####5 备注</p>
-<blockquote>
-<ul>
-<li>本便携版以及本文均使用 <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="external">CC BY-NC-SA 4.0</a>协议；</li>
-<li>本文所有权归 <a href="http://qistchan.com" target="_blank" rel="external">QistChan</a> &amp; <a href="https://wwww.bitmoe.com" target="_blank" rel="external">Bitmoe Inc.</a> 所有；</li>
-<li>本便携版由 <a href="https://www.bitmoe.com" target="_blank" rel="external">Bitmoe Inc.</a> 维护并提供技术支持；</li>
-<li>需要技术支持可以在<a href="https://github.com/Bitmoe/PortableHexo" target="_blank" rel="external">Github仓库</a> 提交<strong><code>Issues</code></strong>；</li>
-<li>Written with <a href="https://stackedit.io/" target="_blank" rel="external">StackEdit</a>.</li>
-</ul>
-</blockquote>
 
-      
+
+        <!-- Sidebar Footer -->
+        <!--
+I'm glad you use this theme, the development is no so easy, I hope you can keep the copyright, I will thank you so much.
+If you still want to delete the copyrights, could you still retain the first one? Which namely "Theme Material"
+It will not impact the appearance and can give developers a lot of support :)
+
+很高兴您使用并喜欢该主题，开发不易 十分谢谢与希望您可以保留一下版权声明。
+如果您仍然想删除的话 能否只保留第一项呢？即 "Theme Material"
+它不会影响美观并可以给开发者很大的支持和动力。 :)
+-->
+
+<!-- Sidebar Divider -->
+
+    <div class="sidebar-divider"></div>
+
+
+<!-- Theme Material -->
+
+    <a href="https://github.com/viosey/hexo-theme-material"  class="sidebar-footer-text-a" target="_blank">
+        <div class="sidebar-text mdl-button mdl-js-button mdl-js-ripple-effect sidebar-footer-text-div" data-upgraded=",MaterialButton,MaterialRipple">
+            سمة - Material
+            <span class="sidebar-badge badge-circle">i</span>
+        </div>
+    </a>
+
+
+<!-- Help & Support -->
+<!--
+
+-->
+
+<!-- Feedback -->
+<!--
+
+-->
+
+<!-- About Theme -->
+<!--
+
+-->
+
     </div>
-    <footer class="article-footer">
-      <a data-url="ahjwen.github.io/2018/01/07/hello-world/" data-id="cji9xvjyj0000xka9w665kvs1" class="article-share-link">Delen</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
 
-
-  
-
-</section>
-        
-          <aside id="sidebar">
-  
+    <!-- Sidebar Image -->
     
 
-  
-    
-
-  
-    
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Archieven</h3>
-    <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/06/">June 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/05/">May 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/04/">April 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/01/">January 2018</a></li></ul>
-    </div>
-  </div>
-
-
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Recente berichten</h3>
-    <div class="widget">
-      <ul>
-        
-          <li>
-            <a href="/2018/06/11/微软FLow自动化事务备份ftp文件到网盘/">微软FLow自动化事务备份ftp文件到网盘</a>
-          </li>
-        
-          <li>
-            <a href="/2018/05/09/ahjwen/">2018最新EDU邮箱申请-无限谷歌网盘，Office365教育版</a>
-          </li>
-        
-          <li>
-            <a href="/2018/04/29/index/">index</a>
-          </li>
-        
-          <li>
-            <a href="/2018/01/07/hello-world/">Hello World</a>
-          </li>
-        
-      </ul>
-    </div>
-  </div>
-
-  
 </aside>
-        
-      </div>
-      <footer id="footer">
-  
-  <div class="outer">
-    <div id="footer-info" class="inner">
-      &copy; 2018 ahjwen<br>
-      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
-    </div>
-  </div>
-</footer>
-    </div>
-    <nav id="mobile-nav">
-  
-    <a href="/" class="mobile-nav-link">Home</a>
-  
-    <a href="/archives" class="mobile-nav-link">Archives</a>
-  
-</nav>
+
+                    
+
+                    
+                        <!-- Footer Top Button -->
+                        <div id="back-to-top" class="toTop-wrap">
+    <a href="#top" class="toTop">
+        <i class="material-icons footer_top-i">expand_less</i>
+    </a>
+</div>
+
+                    
+
+                    <!--Footer-->
+<footer class="mdl-mini-footer" id="bottom">
+    
+        <!-- Paradox Footer Left Section -->
+        <div class="mdl-mini-footer--left-section sns-list">
+    <!-- Twitter -->
+    
+        <a href="https://twitter.com/twitter" target="_blank">
+            <button class="mdl-mini-footer--social-btn social-btn footer-sns-twitter">
+                <span class="visuallyhidden">Twitter</span>
+            </button><!--
+     --></a>
     
 
-<script src="/js/jquery.min.js"></script>
+    <!-- Facebook -->
+    
+        <a href="https://www.facebook.com/facebook" target="_blank">
+            <button class="mdl-mini-footer--social-btn social-btn footer-sns-facebook">
+                <span class="visuallyhidden">Facebook</span>
+            </button><!--
+     --></a>
+    
+
+    <!-- Google + -->
+    
+        <a href="https://www.google.com/" target="_blank">
+            <button class="mdl-mini-footer--social-btn social-btn footer-sns-gplus">
+                <span class="visuallyhidden">Google Plus</span>
+            </button><!--
+     --></a>
+    
+
+    <!-- Weibo -->
+    
+
+    <!-- Instagram -->
+    
+
+    <!-- Tumblr -->
+    
+
+    <!-- Github -->
+    
+
+    <!-- LinkedIn -->
+    
+
+    <!-- Zhihu -->
+    
+
+    <!-- Bilibili -->
+    
+
+    <!-- Telegram -->
+    
+    
+    <!-- V2EX -->
+    
+</div>
 
 
-  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
-  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+        <!--Copyright-->
+        <div id="copyright">
+            Copyright&nbsp;©<script type="text/javascript">var fd = new Date();document.write("&nbsp;" + fd.getFullYear() + "&nbsp;");</script>ahjwen
+            
+        </div>
+
+        <!-- Paradox Footer Right Section -->
+
+        <!--
+        I am glad you use this theme, the development is no so easy, I hope you can keep the copyright.
+        It will not impact the appearance and can give developers a lot of support :)
+
+        很高兴您使用该主题，开发不易，希望您可以保留一下版权声明。
+        它不会影响美观并可以给开发者很大的支持。 :)
+        -->
+
+        <div class="mdl-mini-footer--right-section">
+            <div>
+                <div class="footer-develop-div">Powered by <a href="https://hexo.io" target="_blank" class="footer-develop-a">Hexo</a></div>
+                <div class="footer-develop-div">Theme - <a href="https://github.com/viosey/hexo-theme-material" target="_blank" class="footer-develop-a">Material</a></div>
+            </div>
+        </div>
+    
+</footer>
 
 
-<script src="/js/script.js"></script>
+                    <!-- Import JS File -->
 
-  </div>
-</body>
+    <script>lsloader.load("lazyload_js","/js/lazyload.min.js?1BcfzuNXqV+ntF6gq+5X3Q==", true)</script>
+
+
+
+    <script>lsloader.load("js_js","/js/js.min.js?V/53wGualMuiPM3xoetD5Q==", true)</script>
+
+
+
+    <script>lsloader.load("np_js","/js/nprogress.js?pl3Qhb9lvqR1FlyLUna1Yw==", true)</script>
+
+
+<script type="text/ls-javascript" id="NProgress-script">
+    NProgress.configure({
+        showSpinner: true
+    });
+    NProgress.start();
+    $('#nprogress .bar').css({
+        'background': '#29d'
+    });
+    $('#nprogress .peg').css({
+        'box-shadow': '0 0 10px #29d, 0 0 15px #29d'
+    });
+    $('#nprogress .spinner-icon').css({
+        'border-top-color': '#29d',
+        'border-left-color': '#29d'
+    });
+    setTimeout(function() {
+        NProgress.done();
+        $('.fade').removeClass('out');
+    }, 800);
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Swiftye -->
+    
+
+    <!-- Local Search-->
+    
+
+
+<!-- UC Browser Compatible -->
+<script>
+	var agent = navigator.userAgent.toLowerCase();
+	if(agent.indexOf('ucbrowser')>0) {
+		document.write('<link rel="stylesheet" href="/css/uc.css">');
+	   alert('由于 UC 浏览器使用极旧的内核，而本网站使用了一些新的特性。\n为了您能更好的浏览，推荐使用 Chrome 或 Firefox 浏览器。');
+	}
+</script>
+
+<!-- Import prettify js  -->
+
+
+
+<!-- Window Load -->
+<!-- add class for prettify -->
+<script type="text/ls-javascript" id="window-load">
+    $(window).on('load', function() {
+        // Post_Toc parent position fixed
+        $('.post-toc-wrap').parent('.mdl-menu__container').css('position', 'fixed');
+    });
+
+    
+    
+</script>
+
+<!-- MathJax Load-->
+
+
+<!-- Bing Background -->
+
+
+<script type="text/ls-javascript" id="lazy-load">
+    // Offer LazyLoad
+    queue.offer(function(){
+        $('.lazy').lazyload({
+            effect : 'show'
+        });
+    });
+
+    // Start Queue
+    $(document).ready(function(){
+        setInterval(function(){
+            queue.execNext();
+        },200);
+    });
+</script>
+
+<!-- Custom Footer -->
+
+
+
+<script>
+    (function(){
+        var scriptList = document.querySelectorAll('script[type="text/ls-javascript"]')
+
+        for (var i = 0; i < scriptList.length; ++i) {
+            var item = scriptList[i];
+            lsloader.runInlineScript(item.id,item.id);
+        }
+    })()
+console.log('\n %c © Material Theme | Version: 1.5.2 | https://github.com/viosey/hexo-theme-material %c \n', 'color:#455a64;background:#e0e0e0;padding:5px 0;border-top-left-radius:5px;border-bottom-left-radius:5px;', 'color:#455a64;background:#e0e0e0;padding:5px 0;border-top-right-radius:5px;border-bottom-right-radius:5px;');
+</script>
+
+                </main>
+            </div>
+        </body>
+    
 </html>
